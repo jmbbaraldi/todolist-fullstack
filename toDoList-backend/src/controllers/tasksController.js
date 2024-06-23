@@ -22,7 +22,7 @@ const updateTask = async (request, response) => {
     
     await taskModel.updateTask(id, request.body);
     return response.status(204).json();
-}
+};
 
 module.exports = {
     getAll,
