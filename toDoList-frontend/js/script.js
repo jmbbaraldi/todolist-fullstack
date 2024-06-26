@@ -130,6 +130,8 @@ const createRow = (task) => {
 const loadTasks = async () => {
     const tasks = await fetchTask();
 
+    tasks.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+
     tbody.innerHTML = '';
 
     tasks.forEach((task) => {
